@@ -1,0 +1,50 @@
+Name:           CPP File System
+Version:        0.0.1
+Date:           08/14/2010
+Author:         Sycadellicman (Patrick Jennings)
+Contact:        <sycadellicman@gmail.com>
+Source:         http://github.com/Sycadellicman/CPP-File-System
+
+----------------------------------------------------------------
+
+--Description--
+This library enables a user to create a file system similar to
+the Unix file system design.
+
+When first initialized, the file system contains an empty root
+node (with label "/"). The programmer may add children nodes to
+the file system which will be added based on the label of the
+child.
+
+For example, if after initialization, the user adds a node with
+label "/var", the node will be placed in the root nodes
+children list. If the user then adds a node with label
+"/var/log", the node will be placed in the child list of the
+node with label "/var".
+
+A node may hold any data structure (void *) and may have any
+number of children. The nodes label must be unique. This means
+all nodes should have a different label.
+
+----------------------------------------------------------------
+
+--Dependencies--
+CPP Linked List <http://github.com/Sycadellicman/CPP-Linked-List>
+
+----------------------------------------------------------------
+
+--Install--
+The package makes use of the Automake utilities. Installation
+is straightforward and can be performed by executing the
+following commands:
+1) ./configure
+2) make
+3) make install
+
+----------------------------------------------------------------
+
+--Uninstall--
+Removing the package is just as easy and can be done by
+executing the command:
+1) make uninstall
+
